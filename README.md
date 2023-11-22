@@ -28,21 +28,30 @@ Example:
 ```bash
 make
 ```
-## 5. Load the Kernel Module
+## 5. Activate PWM
+```bash
+sudo dtoverlay pwm
+```
+after that you can check if your pwmchip is available with the command:
+```bash
+ls /sys/class/pwm
+```
+Verify that a directory named pwmchip0 or similar appears, indicating successful activation.
+## 6. Load the Kernel Module
 ```bash
 sudo insmod pwm_driver.ko
 ```
-## 6. Set Appropriate Permissions
+## 7. Set Appropriate Permissions
 ```bash
 sudo chmod 666 /dev/my_pwm_0_driver
 ```
-## 7. Control PWM
+## 8. Control PWM
   Send duty cycle values (0-100) to the driver.
   Example:
 ```bash
 echo 50 > /dev/my_pwm_0_driver
 ```
-## 8. Unload the Kernel Module
+## 9. Unload the Kernel Module
 ```bash
 sudo rmmod pwm_driver.ko
 ```
