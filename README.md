@@ -19,8 +19,11 @@ sudo apt install raspberrypi-kernel-headers
 sudo apt upgrade
 ```
 ## 4. Build the Kernel Module
-  Navigate to the directory containing your .c file and the accompanying Makefile.
-  Use the make command to build the .ko file.
+
+Navigate to the directory containing your .c file and the accompanying Makefile.
+Ensure that you are using the same GCC compiler version in your Makefile that was used to compile your kernel.
+This ensures compatibility and prevents potential issues during the module build process.
+Use the make command to build the .ko file.
 Example:
 ```bash
 make
