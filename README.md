@@ -46,4 +46,4 @@ sudo rmmod pwm_driver.ko
 ## Features
 
 - User-space interface for controlling PWM through a character device file.
-- Designed for Raspberry Pi 3b GPIO.
+- Designed for Raspberry Pi 3b.
